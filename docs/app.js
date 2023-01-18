@@ -7,9 +7,9 @@ function calculateAnnualRate( monthlyRate) {
 
 function selectPlan( planName, monthlyRate ) {
     let annualRate = calculateAnnualRate( monthlyRate );
-    console.log( planName + " plan Selected! ");
+   /*console.log( planName + " plan Selected! ");
     console.log( '$'+ monthlyRate + '/mo' );
-    console.log( '$'+ annualRate + '/yr' );
+    console.log( '$'+ annualRate + '/yr' );*/
 
     let planNameElement = document.getElementById( "planname" );
     planNameElement.innerHTML = planName;
@@ -21,6 +21,11 @@ function selectPlan( planName, monthlyRate ) {
     annualRateElement.innerHTML = '$' + annualRate + '/yr';
 
     let today = new Date();
+    let nextYear = new Date();
+    nextYear.setFullYear( today.getFullYear() + 1 );
+
+    let goodUntilElement = document.getElementById( "gooduntil" );
+    goodUntilElement.innerHTML = nextYear.toDateString();
 }
 
 
