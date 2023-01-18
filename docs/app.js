@@ -1,12 +1,6 @@
 "use strict";
 
-function conversation() {
-    console.log( "Hello" );
-    console.log( "How are you?" );
-    console.log( "Goodbye!?" );
+function selectPlan( planName ) {
+    console.log( planName + "plan Selected!");
 }
-
-conversation();
-conversation();
-conversation();
 
